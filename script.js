@@ -9,36 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. INICIA ÍCONES (LUCIDE)
     lucide.createIcons();
 
-    // 3. SISTEMA DE INTRODUÇÃO (BOOT)
-    const introLayer = document.getElementById('intro-layer');
-    const mainInterface = document.getElementById('main-interface');
-    const counterDisplay = document.getElementById('year-counter');
+    // 3. (REMOVIDO: SISTEMA DE INTRODUÇÃO)
+    // O site carrega diretamente agora.
     const body = document.body;
-
-    let currentYear = 0;
-    const targetYear = 15;
-    const duration = 3500;
-    const intervalTime = duration / targetYear;
-
-    // Bloqueia scroll durante a intro
-    body.style.overflow = 'hidden';
-
-    const timer = setInterval(() => {
-        currentYear++;
-        counterDisplay.innerText = currentYear.toString().padStart(2, '0');
-        if (currentYear >= targetYear) {
-            clearInterval(timer);
-            setTimeout(revealSite, 500);
-        }
-    }, intervalTime);
-
-    function revealSite() {
-        window.scrollTo(0, 0); // Garante topo novamente ao revelar
-        introLayer.style.transform = 'translateY(-100%)';
-        mainInterface.classList.remove('hidden');
-        mainInterface.classList.add('visible');
-        body.style.overflow = 'auto'; // Libera scroll
-    }
 
     // 4. LÓGICA DOS MODAIS (DIALOG)
     window.openModal = function(modalId) {
