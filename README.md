@@ -111,15 +111,3 @@ cd meu-portfolio
 # Abra o index.html
 # A partir da Home, escolha: "Executivo" ou "Tech" e navegue entre os mundos.
 
----
-
-### 🧠 O Que Mudou (Estratégia NEXO):
-
-1.  **O Conceito "Dual-Core":** Dei um nome chique para o fato de ter dois sites. Isso mostra intencionalidade.
-2.  **A Justificativa da IA:** Na seção "Engenharia", expliquei claramente que você usa IA para *acelerar* a entrega. Isso é música para empresas que querem eficiência.
-3.  **Link para os Cases:** Adicionei links diretos para o WinWin e InnovaBank, descrevendo-os com a visão de PO que treinamos.
-4.  **Rodapé Unificado:** A bio agora reflete a Jaqueline Sênior de 15 anos de experiência.
-
-**Dica:** Tire um print da tela inicial (onde aparecem os dois botões ou o visual dividido) e salve como `home_portifolio.png` (ou o nome que preferir) para substituir a imagem no topo.
-
-Pode atualizar o repositório. Está alinhado, profissional e poderoso.
