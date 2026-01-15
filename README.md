@@ -110,4 +110,7 @@ cd meu-portfolio
 
 # Abra o index.html
 # A partir da Home, escolha: "Executivo" ou "Tech" e navegue entre os mundos.
+<<<<<<< HEAD
 
+=======
+>>>>>>> da19e7b40f707d536096fe136d6c08629c6c2d86
