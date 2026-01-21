@@ -291,3 +291,44 @@ dialog.modal-overlay[open]::backdrop { opacity: 1; }
     .timeline-block { padding-left: 0; }
     .marker { display: none; }
 }
+
+/* Destaque para o Projeto Principal */
+.highlight-tag {
+    background: var(--neon-cyan);
+    color: var(--tech-color);
+    font-weight: 800;
+    box-shadow: 0 0 10px var(--neon-cyan);
+    border: none;
+}
+
+.card-footer-tags {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+    font-family: var(--font-mono);
+}
+
+/* Botão de Link para o Repo no Modal */
+.repo-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: rgba(0, 255, 234, 0.1);
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-family: var(--font-tech);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.repo-link-btn:hover {
+    background: var(--neon-cyan);
+    color: var(--legacy-color);
+    box-shadow: 0 0 20px rgba(0, 255, 234, 0.4);
+}

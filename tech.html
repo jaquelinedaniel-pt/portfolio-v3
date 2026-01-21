@@ -47,7 +47,7 @@
                 </h1>
                 
                 <p class="hero-desc">
-                    Product Owner e QA com 15 anos de background operacional. 
+                    Analista Funcional com 15 anos de background operacional. 
                     Eu traduzo <span class="highlight">dores de negócio</span> em <span class="highlight-tech">soluções de código</span>.
                 </p>
 
@@ -87,7 +87,7 @@
                         <p>> <span class="cmd-keyword">const</span> <span class="cmd-var">professional</span> = {</p>
                         <div class="indent">
                             <p>ID: <span class="string">"Jaqueline Daniel"</span>,</p>
-                            <p>Role: <span class="string">"Technical Product Owner & Software Engineer"</span>,</p>
+                            <p>Role: <span class="string">"Functional Analyst & Software Engineer"</span>,</p>
                             <p>origin: <span class="string">"Gestão Operacional & Vendas"</span>,</p>
                             <p>current_state: <span class="string">"Building High-ROI Digital Solutions"</span>,</p>
                             <p>mission: <span class="string">"Converter requisitos complexos em software funcional."</span></p>
@@ -192,10 +192,24 @@
             </div>
 
             <div class="projects-grid">
+                <button class="neon-card featured-project" onclick="openModal('modal-douro')">
+                    <div class="card-bg" style="background-image: url('imagens/douro-vinhos.png')"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="tech-tag highlight-tag">FUNCTIONAL ANALYSIS</span>
+                        </div>
+                        <h3>DOURO VINHOS MOBILE</h3>
+                        <p>Offline-First Architecture & Full SDLC Documentation.</p>
+                        <div class="card-footer-tags">
+                            <span>BPMN 2.0</span> • <span>UML</span> • <span>SRS</span>
+                        </div>
+                    </div>
+                </button>
+
                 <button class="neon-card" onclick="openModal('modal-winwin')">
                     <div class="card-bg" style="background-image: url('imagens/winwin-app.png')"></div>
                     <div class="card-content">
-                        <div class="card-header"><span class="tech-tag">PO & QA LEAD</span></div>
+                        <div class="card-header"><span class="tech-tag">FUNCTIONAL ANALYSIS</span></div>
                         <h3>WINWIN APP</h3>
                         <p>Liderança de ciclo completo. + Click to Inspect</p>
                     </div>
@@ -210,6 +224,7 @@
                     </div>
                 </button>
 
+                <!--
                 <button class="neon-card" onclick="openModal('modal-stilus')">
                     <div class="card-bg" style="background-image: url('imagens/stilus.png')"></div>
                     <div class="card-content">
@@ -218,6 +233,7 @@
                         <p>12 Anos de Gestão 360º. + Click to Inspect</p>
                     </div>
                 </button>
+                -->
             </div>
         </section>
 
@@ -244,7 +260,7 @@
                     <div class="timeline-content">
                         <div class="timeline-inner">
                             <span class="year">NOV 2025</span>
-                            <h3>WinWin App (Product Owner)</h3>
+                            <h3>WinWin App (FUNCTIONAL ANALYSIS)</h3>
                             <p><strong>Projeto Independente (Full Cycle).</strong> Liderança integral de produto mobile. Da concepção das regras de negócio (gamificação) até à orquestração técnica via IA e validação de qualidade (QA).</p>
                         </div>
                     </div>
@@ -323,6 +339,56 @@
 
     </main>
 
+    <dialog id="modal-douro" class="modal-overlay">
+        <div class="modal-content wide-modal">
+            <button class="close-modal" onclick="closeModal('modal-douro')">×</button>
+            
+            <div class="modal-header">
+                <h2 class="title-cyan">DOURO VINHOS SALES</h2>
+                <span class="modal-badge">OFFLINE-FIRST ARCHITECTURE</span>
+            </div>
+
+            <div class="modal-grid">
+                <div class="modal-img-container">
+                    <div class="modal-img" style="background-image: url('imagens/mvp.png')"></div>
+                    <div class="modal-links-row">
+                        <a href="https://github.com/jaquelinedaniel-pt/dourovinhos-mobile-sales" target="_blank" class="repo-link-btn">
+                            <i data-lucide="github"></i> VER REPOSITÓRIO COMPLETO
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal-text">
+                    <h3>O Desafio (Business Case)</h3>
+                    <p>
+                        Digitalizar a força de vendas de uma distribuidora de vinhos que opera em caves e zonas rurais (Douro) 
+                        com <strong>zero conectividade</strong>. O sistema precisava garantir sincronização complexa de dados 
+                        e regras de negócio (bonificações, tabelas de preço) sem acesso ao ERP em tempo real.
+                    </p>
+
+                    <div class="artifacts-grid">
+                        <h3>Artefatos de Engenharia Produzidos:</h3>
+                        <ul>
+                            <li><i data-lucide="file-text"></i> <strong>SRS Completo:</strong> Especificação de Requisitos de Software.</li>
+                            <li><i data-lucide="waypoints"></i> <strong>BPMN 2.0:</strong> Mapeamento dos fluxos de Sincronização e Venda.</li>
+                            <li><i data-lucide="network"></i> <strong>UML & MER:</strong> Diagramas de Sequência e Modelagem de Dados (SQLite).</li>
+                            <li><i data-lucide="check-circle"></i> <strong>QA & Gherkin:</strong> Casos de teste BDD e evidências de validação.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Tech Stack & Tools</h3>
+                    <div class="tags-wrapper">
+                        <span class="tech-tag">BPMN (CAMUNDA)</span>
+                        <span class="tech-tag">SQLITE</span>
+                        <span class="tech-tag">REACT NATIVE</span>
+                        <span class="tech-tag">ASTAH UML</span>
+                        <span class="tech-tag">JEST/QA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
     <dialog id="modal-winwin" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal('modal-winwin')">×</button>
@@ -331,12 +397,19 @@
                 <span class="modal-badge">MOBILE PRODUCT STRATEGY</span>
             </div>
             <div class="modal-grid">
-                <div class="modal-img" style="background-image: url('imagens/winwin.png')"></div>
+                <div class="modal-img-wrapper" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div class="modal-img" style="background-image: url('imagens/winwin.png'); height: 250px; width: 100%; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,0.1);"></div>
+                    
+                    <a href="https://github.com/jaquelinedaniel-pt/winwin-product-portfolio" target="_blank" class="repo-link-btn">
+                        <i data-lucide="github"></i> VER REPOSITÓRIO
+                    </a>
+                </div>
+
                 <div class="modal-text">
                     <h3>Technical Specs</h3>
                     <ul>
-                        <li><strong>Role:</strong> Product Owner & QA Lead</li>
-                        <li><strong>Tech:</strong> React Native/ Firebase/ Logic</li>
+                        <li><strong>Role:</strong> FUNCTIONAL ANALYSIS</li>
+                        <li><strong>Tech:</strong> React Native / Firebase / Logic</li>
                         <li><strong>Key Achievement:</strong> Mitigação de Race Conditions.</li>
                     </ul>
                     <h3>Contexto</h3>
@@ -354,15 +427,23 @@
                 <span class="modal-badge">DIGITAL STRATEGY & SEO</span>
             </div>
             <div class="modal-grid">
-                <div class="modal-img" style="background-image: url('imagens/site-pessoal.png')"></div>
+                <div class="modal-img-wrapper" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div class="modal-img" style="background-image: url('imagens/site-pessoal.png'); height: 250px; width: 100%; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,0.1);"></div>
+                    
+                    <a href="https://jaquelinedaniel.com" target="_blank" class="repo-link-btn">
+                        <i data-lucide="site"></i> VER SITE
+                    </a>
+                </div>
+
                 <div class="modal-text">
                     <h3>Frontend Developer & Strategist</h3>
                     <ul>
                         <li><strong>Role:</strong> Full-Stack Developer</li>
-                        <li><strong>Stack:</strong> HTML5/CSS3 SEO Lead Generation</li>
+                        <li><strong>Stack:</strong> HTML5 / CSS3 / JavaScript Vanilla</li>
+                        <li><strong>Focus:</strong> SEO Técnico & Performance (Lighthouse)</li>
                     </ul>
                     <h3>Contexto</h3>
-                    <p>Desenvolvimento de identidade digital focada em conversão. SEO Técnico e Copywriting.</p>
+                    <p>Desenvolvimento de identidade digital focada em conversão. Arquitetura Dual-Core (Executivo + Tech) sem frameworks pesados.</p>
                 </div>
             </div>
         </div>
