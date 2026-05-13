@@ -27,7 +27,8 @@
     --font-body: 'Rajdhani', sans-serif;
     --font-code: 'Fira Code', monospace;
 
-    --global-padding: 10%; 
+    /* ALINHAMENTO GLOBAL: Reduzido para 6% para ocupar melhor a tela e alinhar tudo */
+    --global-padding: 6%; 
 
     --z-back: -1;
     --z-normal: 1;
@@ -42,11 +43,11 @@ body { background-color: var(--bg); color: var(--text); font-family: var(--font-
 /* ==========================================================================
    2. NAVEGAÇÃO & UI GERAL
    ========================================================================== */
-/* #main-interface removido ou simplificado, pois não precisa mais de opacidade */
 #main-interface { min-height: 100vh; }
 
 .top-nav {
-    position: fixed; top: 0; left: 0; width: 100%; padding: 20px 40px;
+    position: fixed; top: 0; left: 0; width: 100%; 
+    padding: 20px var(--global-padding); /* ALINHAMENTO: Usando a variável global */
     display: flex; justify-content: space-between; align-items: center; z-index: var(--z-fixed);
     background: rgba(5, 5, 5, 0.6); backdrop-filter: blur(20px); border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, var(--legacy-color), var(--tech-color)) 1; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
@@ -58,6 +59,7 @@ body { background-color: var(--bg); color: var(--text); font-family: var(--font-
 .nav-item:hover { color: var(--legacy-color); text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 .hire-btn { padding: 10px 30px; background: transparent; color: var(--tech-color); border: 1px solid var(--tech-color); text-decoration: none; font-weight: 700; font-family: var(--font-display); font-size: 1.2rem; transition: 0.3s; }
 .hire-btn:hover { background: var(--tech-color); color: #000; box-shadow: 0 0 30px var(--tech-color); }
+
 /* ==========================================================================
    BOTÃO DE TRANSIÇÃO (TECH -> EXECUTIVE)
    ========================================================================== */
@@ -66,21 +68,15 @@ body { background-color: var(--bg); color: var(--text); font-family: var(--font-
     align-items: center;
     gap: 8px;
     padding: 8px 24px;
-    
-    /* Cor Dourada para indicar o mundo Executivo */
     color: var(--tech-color); 
     border: 1px solid var(--legacy-color);
-    
     text-decoration: none;
-    font-family: var(--font-display); /* Fonte Teko (Tech) */
+    font-family: var(--font-display); 
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    
-    background: rgba(212, 175, 55, 0.05); /* Fundo dourado muito sutil */
+    background: rgba(212, 175, 55, 0.05); 
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    
-    /* Clip-path para dar um corte tecnológico nos cantos */
     clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 
@@ -90,18 +86,16 @@ body { background-color: var(--bg); color: var(--text); font-family: var(--font-
     transition: 0.3s;
 }
 
-/* HOVER EFFECT */
 .switch-btn-executive:hover {
-    background: var(--tech-color); /* Preenche de dourado */
-    color: var(--legacy-color);      /* Texto preto para contraste */
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); /* Glow Dourado */
+    background: var(--tech-color); 
+    color: var(--legacy-color);      
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); 
     transform: translateY(-2px);
 }
 
-/* Ajuste para Mobile */
 @media (max-width: 900px) {
     .switch-btn-executive {
-        display: none; /* Em mobile, geralmente esconde-se no menu hambúrguer */
+        display: none; 
     }
 }
 
@@ -115,8 +109,9 @@ body { background-color: var(--bg); color: var(--text); font-family: var(--font-
    ========================================================================== */
 .hero-content {
     position: relative; height: 100vh; width: 100%; display: flex; align-items: center;
-    justify-content: space-between; gap: 50px; padding: 0 var(--global-padding); max-width: 1400px; margin: 0 auto;
-    padding-top: 80px; /* Ajuste para não ficar colado na nav fixa */
+    /* ALINHAMENTO: max-width e margin: 0 auto removidos para não achar no centro */
+    justify-content: space-between; gap: 50px; padding: 0 var(--global-padding);
+    padding-top: 80px; 
 }
 .hero-status-line { font-family: var(--font-code); font-size: 1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; opacity: 0.8; }
 .sys-label { color: #666; font-weight: 500; }
@@ -143,7 +138,8 @@ h1 { font-family: var(--font-display); font-size: 6vw; line-height: 0.9; text-tr
 /* ==========================================================================
    4. PROFILE SECTION (SOBRE)
    ========================================================================== */
-.profile-container { display: flex; align-items: center; gap: 60px; max-width: 1200px; margin: 0 auto; }
+/* ALINHAMENTO: max-width removido, substituído por width 100% */
+.profile-container { display: flex; align-items: center; gap: 60px; width: 100%; }
 .profile-avatar-wrapper { position: relative; width: 350px; height: 400px; flex-shrink: 0; border: 1px solid #333; padding: 10px; background: rgba(255, 255, 255, 0.02); }
 .profile-img { width: 100%; height: 100%; background-size: cover; background-position: center; filter: grayscale(100%) contrast(1.2); transition: 0.5s; }
 .profile-avatar-wrapper:hover .profile-img { filter: grayscale(0%); }
@@ -216,7 +212,8 @@ h1 { font-family: var(--font-display); font-size: 6vw; line-height: 0.9; text-tr
 .title-pink { color: #ff00ff; text-shadow: 0 0 5px #ff00ff; }
 .transition-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, #ff00ff, #00ffff); box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
 
-.terminal-section { padding: 100px 40px; background: #050505; display: flex; justify-content: center; }
+/* ALINHAMENTO: Usando variável global para os paddings laterais */
+.terminal-section { padding: 100px var(--global-padding); background: #050505; display: flex; justify-content: center; }
 .terminal-window { width: 100%; max-width: 800px; background: rgba(10, 10, 10, 0.95); border: 1px solid #333; border-radius: 8px; box-shadow: 0 0 40px rgba(0, 255, 234, 0.1); font-family: var(--font-code); overflow: hidden; position: relative; }
 .terminal-window::before { content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%); background-size: 100% 4px; z-index: 2; pointer-events: none; }
 .terminal-header { background: #1a1a1a; padding: 12px 20px; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid #333; }
@@ -228,7 +225,8 @@ h1 { font-family: var(--font-display); font-size: 6vw; line-height: 0.9; text-tr
 .cursor { display: inline-block; width: 10px; height: 1.2em; background: var(--tech-color); animation: blink 1s infinite; vertical-align: middle; margin-left: 5px; }
 .terminal-footer { background: #1a1a1a; padding: 5px 20px; border-top: 1px solid #333; font-size: 0.7rem; color: #555; display: flex; justify-content: space-between; }
 
-.main-footer { background: #000; border-top: 1px solid #333; position: relative; padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-code); font-size: 0.8rem; color: #555; overflow: hidden; }
+/* ALINHAMENTO: Usando variável global para os paddings laterais */
+.main-footer { background: #000; border-top: 1px solid #333; position: relative; padding: 30px var(--global-padding); display: flex; justify-content: space-between; align-items: center; font-family: var(--font-code); font-size: 0.8rem; color: #555; overflow: hidden; }
 .main-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #00ffea, #f727d8, transparent); box-shadow: 0 0 10px rgba(0, 255, 234, 0.81); }
 .system-status { display: flex; align-items: center; gap: 10px; color: var(--tech-color); text-transform: uppercase; letter-spacing: 1px; }
 .status-dot { width: 8px; height: 8px; background: #1bf72a; border-radius: 50%; box-shadow: 0 0 10px #1bf72a; animation: blink 2s infinite; }
@@ -331,4 +329,24 @@ dialog.modal-overlay[open]::backdrop { opacity: 1; }
     background: var(--neon-cyan);
     color: var(--legacy-color);
     box-shadow: 0 0 20px rgba(0, 255, 234, 0.4);
+}
+
+/* Definindo a animação de oscilação e brilho (Glow Pulse) */
+@keyframes oscillateGlow {
+    0%, 100% {
+        color: #00ffff;
+        filter: drop-shadow(0 0 5px #00ffff) drop-shadow(0 0 15px #00ffff);
+    }
+    50% {
+        color: #bd00ff;
+        filter: drop-shadow(0 0 5px #bd00ff) drop-shadow(0 0 15px #bd00ff);
+    }
+}
+
+/* Criando a classe que aplica a animação ao ícone */
+.analyst-icon-animated {
+    width: 70px;
+    height: 70px;
+    animation: oscillateGlow 4s infinite ease-in-out;
+    transition: color 0.5s ease, filter 0.5s ease;
 }
